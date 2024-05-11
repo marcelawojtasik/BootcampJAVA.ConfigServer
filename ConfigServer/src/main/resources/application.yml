@@ -6,7 +6,7 @@ spring:
       server:
         git:
           default-label: main #le indico rama x defecto
-          url: https://github.com/marcelawojtasik/BootcampJAVA.ConfigServer.git
+          uri: https://github.com/marcelawojtasik/BootcampJAVA.ConfigServer.git
           search-paths: config-data
   application:
     name: ConfigServer
