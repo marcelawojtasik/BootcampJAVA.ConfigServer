@@ -15,4 +15,7 @@ public interface FlightClient {
 
     @GetMapping("/flights/id{id}")
     FlightDTO getFlight(@PathVariable Long id);
+
+//    @GetMapping("/flights/DTOid{id}")
+//    FlightDTO getFlightDTOById(@PathVariable Long id);
 }

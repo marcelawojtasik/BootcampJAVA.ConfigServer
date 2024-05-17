@@ -25,4 +25,10 @@ public class FlightController {
         return flightClient.getFlight(id);
     }
 
+    //PROBANDO
+//    @GetMapping("/DTOid")
+//    public FlightDTO getFlightDTO(Long id){
+//        return flightClient.getFlightDTOById(id);
+//    }
+
 }

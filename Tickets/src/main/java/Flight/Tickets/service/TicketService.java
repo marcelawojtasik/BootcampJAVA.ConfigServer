@@ -1,15 +1,12 @@
 package Flight.Tickets.service;
 
-import Flight.Tickets.controller.FlightController;
-import Flight.Tickets.model.FlightDTO;
-import Flight.Tickets.model.Ticket;
+import Flight.Tickets.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
 
 @Service
 public class TicketService {
@@ -18,14 +15,17 @@ public class TicketService {
 
 
     public final List<Ticket> tickets = new ArrayList<>();
-    FlightDTO flight1 = new FlightDTO(2052L, "Nueva York", "Los Ángeles", "2024-03-24 08:00", "2024-03-24 11:30", 671673.6, "Diario");
-    FlightDTO flight2 = new FlightDTO(2053L, "Los Ángeles", "Miami", "2024-03-25 10:30", "2024-03-25 16:00", 691766.4, "Semanal");
-    FlightDTO flight3 = new FlightDTO(2054L, "Miami", "Chicago", "2024-03-26 09:45", "2024-03-26 12:15", 551116.8, "Diario");
+    Company company1 = new Company(1L, "name", "banner", "webpage" );
+    Company company2 = new Company(2L, "name2", "banner2", "webpage2" );
 
+    FlightDTO flight1 = new FlightDTO(2052L, "Nueva York", "Los Ángeles", "2024-03-24 08:00", "2024-03-24 11:30", 671673.6, "Diario", company2);
+    FlightDTO flight2 = new FlightDTO(2053L, "Los Ángeles", "Miami", "2024-03-25 10:30", "2024-03-25 16:00", 691766.4, "Semanal", company1);
+    FlightDTO flight3 = new FlightDTO(2054L, "Miami", "Chicago", "2024-03-26 09:45", "2024-03-26 12:15", 551116.8, "Diario", company2);
 
-    Ticket ticket1 = new Ticket(123456L, flight1 , "Copito", "copo@mail.com", "2589654");
+    Ticket ticket1 = new Ticket(123456L, flight1 ,"Copito", "copo@mail.com", "2589654");
     Ticket ticket2 = new Ticket(234567L, flight2 , "Pimpon", "pim@mail.com", "6598544");
     Ticket ticket3 = new Ticket(345678L, flight3, "Cony", "cony@mail.com", "69854786");
+
 
     public void addTickets(){
         tickets.add(ticket1);

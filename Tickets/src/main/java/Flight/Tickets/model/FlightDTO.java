@@ -1,10 +1,12 @@
 package Flight.Tickets.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Setter
+@Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class FlightDTO {
     private Long id;
     private String origin;
@@ -13,5 +15,6 @@ public class FlightDTO {
     private String arrivalTime;
     private double convertedPrice;
     private String frequency;
+    private Company company;
 
 }
